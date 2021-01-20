@@ -2,10 +2,27 @@ class Pub:
     def __init__(self, name, till):
         self.name = name
         self.till = till
-        self.drinks = []
+        # self.drinks = []
+        self.drinks = {}
 
-    def add_drinks_to_pub(self, drink):
-        self.drinks.append(drink)
+    # def add_drinks_to_pub(self, drink):
+    #     self.drinks.append(drink)
+
+    def stock_take(self):
+        stock = 0
+        for drink in self.drinks:
+            stock += self.drinks[drink]
+        return stock
+
+    # def stock_value(self):
+    #     stock_value = 0
+    #     for drink in self.drinks:
+    #         value_per_drink = self.drinks[drink] * self.drink.price
+    #         stock_value += value_per_drink
+    #     return stock_value
+        
+    def add_drinks_to_stock(self, drink_name, quantity):
+        self.drinks[drink_name] = quantity
     
     def add_cash_to_till(self, amount):
         self.till += amount
