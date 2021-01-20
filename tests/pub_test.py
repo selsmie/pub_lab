@@ -62,7 +62,7 @@ class TestPub(unittest.TestCase):
         self.pub.add_drinks_to_stock(self.drink_2.name, 3)
         self.assertEqual(5, self.pub.stock_take())
     
-    # def test_stock_value(self):
-    #     self.pub.add_drinks_to_stock(self.drink_1, 2)
-    #     self.pub.add_drinks_to_stock(self.drink_2, 3)
-    #     self.assertEqual(22, self.pub.stock_value())
+    def test_stock_value(self):
+        self.pub.add_drinks_to_stock(self.drink_1, 2)
+        self.pub.add_drinks_to_stock(self.drink_2, 3)
+        self.assertEqual(22, self.pub.stock_value())
