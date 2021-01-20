@@ -5,7 +5,7 @@ class Customer:
         self.purchased_drink = []
         self.age = age
         self.drunkenness = 0
-        
+        self.purchased_food = []
     
     def buy_drink(self, drink_name):
         self.purchased_drink.append(drink_name)
@@ -19,6 +19,11 @@ class Customer:
         pub.add_cash_to_till(drink.price)
 
     def increase_drunkenness(self, drink):
-        self.drunkenness += drink.alcohol_level    
+        self.drunkenness += drink.alcohol_level   
+
+    def buy_food(self, food_name):
+        self.purchased_food.append(food_name) 
+
+    
 
     
